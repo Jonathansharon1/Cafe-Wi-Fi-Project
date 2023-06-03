@@ -1,0 +1,133 @@
+ .card {
+	 color: inherit;
+	 cursor: pointer;
+	 width: calc(33% - 3rem);
+	 min-width: calc(33% - 3rem);
+	 height: 400px;
+	 min-height: 400px;
+	 perspective: 1000px;
+	 margin: 1rem auto;
+	 position: relative;
+}
+ @media screen and (max-width: 800px) {
+	 .card {
+		 width: calc(50% - 3rem);
+	}
+}
+ @media screen and (max-width: 500px) {
+	 .card {
+		 width: 100%;
+	}
+}
+ .front, .back {
+	 display: flex;
+	 border-radius: 6px;
+	 background-position: center;
+	 background-size: cover;
+	 text-align: center;
+	 justify-content: center;
+	 align-items: center;
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 -webkit-backface-visibility: hidden;
+	 backface-visibility: hidden;
+	 transform-style: preserve-3d;
+	 transition: ease-in-out 600ms;
+}
+ .front {
+	 background-size: cover;
+	 padding: 2rem;
+	 font-size: 1.618rem;
+	 font-weight: 600;
+	 color: #fff;
+	 overflow: hidden;
+	 font-family: Poppins, sans-serif;
+}
+ .front:before {
+	 position: absolute;
+	 display: block;
+	 content: '';
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background: linear-gradient(135deg, #1a9be6, #1a57e6);
+	 opacity: 0.25;
+	 z-index: -1;
+}
+ .card:hover .front {
+	 transform: rotateY(180deg);
+}
+ .card:nth-child(even):hover .front {
+	 transform: rotateY(-180deg);
+}
+ .back {
+	 background: #fff;
+	 transform: rotateY(-180deg);
+	 padding: 0 2em;
+}
+ .card:hover .back {
+	 transform: rotateY(0deg);
+}
+ .card:nth-child(even) .back {
+	 transform: rotateY(180deg);
+}
+ .card:nth-child(even):hover .back {
+	 transform: rotateY(0deg);
+}
+.head{
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+    background-image: url('https://images.pexels.com/photos/2299028/pexels-photo-2299028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+#heading{
+    font-size: 550%;
+    color: #198754;
+
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+#search_div{
+    margin: auto;
+    padding-top: 7%;
+
+}
+#b1{
+    border-radius: 40%;
+    width: 17%;
+}
+.not_found{
+    width: 30%;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+}
+#found{
+    font-size: 400%;
+}
+
+.button{
+    margin-top: 10%;
+}
+#body_nf{
+    background-color: #198754;
+}
+#add_cafe{
+    margin: auto;
+    text-align: center;
+    padding-top: 3%;
+}
